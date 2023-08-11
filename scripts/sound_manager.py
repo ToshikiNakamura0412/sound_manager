@@ -12,7 +12,7 @@ class SoundManager:
 
         # get param
         self.ANNOUNCE_SOUND_PATH = rospy.get_param('~ANNOUNCE_SOUND_PATH', "../sounds/announcement_short.wav")
-        self.is_sound = rospy.get_param('~is_sound', True)
+        self.enable_sound = rospy.get_param('~enable_sound', True)
         self.volume = rospy.get_param("~volume", 50)
 
     def process(self):
@@ -27,7 +27,7 @@ class SoundManager:
         subprocess.call(volume_cmd.split())
 
     def sound_once(self):
-        if self.is_sound == True :
+        if self.enable_sound == True :
             announce_cmd = "aplay " + self.ANNOUNCE_SOUND_PATH
             subprocess.call(announce_cmd.split())
 
