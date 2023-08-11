@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="ANNOUNCE_SOUND_PATH" default="$(find sound_manager)/sounds/announcement_long.wav"/>
+    <node pkg="sound_manager" type="sound_manager.py" name="sound_manager">
+        <param name="ANNOUNCE_SOUND_PATH" value="$(arg ANNOUNCE_SOUND_PATH)"/>
+        <param name="is_sound" value="True"/>
+        <param name="volume" value="50"/>
+    </node>
+</launch>

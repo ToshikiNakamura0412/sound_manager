@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>sound_manager</name>
+  <version>0.0.0</version>
+  <description>The sound_manager package</description>
+
+  <maintainer email="tnakamura.amsl@gmail.com">Toshiki Nakamura</maintainer>
+  <license>TODO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>rospy</depend>
+</package>
